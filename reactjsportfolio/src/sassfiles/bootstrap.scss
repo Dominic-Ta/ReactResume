@@ -1,0 +1,315 @@
+/* The following line can be included in a src/App.scss */
+@import '~bootstrap/scss/bootstrap';
+$welcome_color: #e9e4e4;
+$body_color: #444444;
+$color_2: #3498db;
+$color_3: #5faee3;
+$color_4: #fff;
+$color_5: #384046;
+$color_6: #9ba6af;
+$color_7: #eaf6ff;
+$color_8: #21262a;
+$color_9: rgba(255, 255, 255, 0.8);
+$color_10: #848484;
+$color_11: #124364;
+$color_12: #333;
+$color_13: #b8b8b8;
+$color_14: #111;
+$color_15: #999;
+$color_16: #e1f0fa;
+$color_17: #aaaaaa;
+$color_18: #919191;
+$color_19: #65747f;
+$color_20: red;
+$color_21: #777777;
+$font-family_1: "Open Sans", sans-serif;
+$font-family_2: "Raleway", sans-serif;
+$font-family_3: "Poppins", sans-serif;
+$background-color_1: #fff;
+$background-color_2: #f7fbfe;
+$background-color_3: #5faee3;
+$background-color_4: #3498db;
+$background-color_5: #4ea5e0;
+$border-color_1: #fff;
+$border-top-color_1: #eee;
+
+@font-face {
+  font-family: 'Croissant_One'; /* Define the font family name */
+  src: local('Croissant_One'), url('../fonts/Croissant_One/CroissantOneRegular.ttf') format('truetype'); /* Define the font source as TrueType (TTF) */
+}
+:root {
+  --bs-font-sans-serif: 'Croissant_One';
+}
+.body {
+  font-family: 'Croissant_One' !important; /* Use the custom font family */
+  /* Additional CSS styles for the .body class */
+}
+.AboutMe {
+  font-family: 'Croissant_One' !important;
+  // text-decoration: underline 2px;
+  // text-decoration-color: rgba(27, 97, 189, 0.8)
+}
+.count-box p {
+  font-family: 'Croissant_One' !important;
+}
+.nav-link {
+  &:hover {
+    cursor: pointer;
+  }
+}
+#Home {
+  width: 100%;
+  height: 100vh;
+  background: url('../../public/assets/gifs/ESA_spiral_galaxy.gif') center center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+  &:before {
+    content: "";
+    background: rgba(9, 12, 14, 0.5);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .container {
+    z-index: 2;
+  }
+  h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: $welcome_color;
+    span {
+      border-bottom: 4px solid $background-color_4;
+    }
+  }
+  h2 {
+    color: $color_9;
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+  .btn {
+    // font-family: $font-family_3;
+    text-transform: uppercase;
+    &:hover {
+      background: $background-color_5;
+    }
+  }
+}
+.title {
+  text-align: center;
+  padding-bottom: 30px;
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 120px;
+      height: 1px;
+      background: #ddd;
+      bottom: 1px;
+      left: calc(50% - 60px);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: #3498db;
+      bottom: 0;
+      left: calc(50% - 20px);
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+.about {
+	padding: 10px 0;
+	h3 {
+		font-weight: 600;
+		font-size: 32px;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		font-size: 15px;
+		li+li {
+			margin-top: 10px;
+		}
+		li {
+			position: relative;
+			padding-left: 26px;
+		}
+		svg {
+			// position: absolute;
+			// left: 0;
+			top: 0;
+			font-size: 22px;
+			color: $color_2;
+		}
+	}
+	.icon-boxes {
+		padding-top: 10px;
+    color: $color_2;
+	}
+}
+.skills {
+	.progress {
+		height: 60px;
+		display: block;
+		background: none;
+		border-radius: 0;
+		.skill {
+			padding: 10px 0;
+			margin: 0 0 6px 0;
+			text-transform: uppercase;
+			display: block;
+			font-weight: 600;
+			font-family: $font-family_3;
+			color: $color_5;
+			.val {
+				float: right;
+				font-style: normal;
+			}
+		}
+	}
+	.progress-bar-wrap {
+		background: #e8eaec;
+		.progress-bar {
+			width: 1px;
+			height: 10px;
+			transition: 0.9s;
+			background-color: $background-color_3;
+		}
+	}
+
+}
+#counts {
+	background: white;
+	padding: 30px 0 40px 0;
+	.count-box {
+		padding: 30px 30px 25px 30px;
+		width: 100%;
+		position: relative;
+		text-align: center;
+		background: #fff;
+		i {
+			position: absolute;
+			top: -25px;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 20px;
+			background: #3498db;
+			padding: 12px;
+			color: $color_4;
+			border-radius: 50px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 48px;
+			height: 48px;
+		}
+		span {
+			font-size: 36px;
+			display: block;
+			font-weight: 600;
+			color: $color_11;
+		}
+		p {
+			padding: 0;
+			margin: 0;
+			font-family: $font-family_2;
+			font-size: 14px;
+		}
+	}
+}
+.experience {
+	.icon-box {
+		padding: 30px;
+		border-radius: 6px;
+		background: #fff;
+		transition: ease-in-out 0.3s;
+		i {
+			float: left;
+			color: $color_2;
+			font-size: 40px;
+			line-height: 0;
+		}
+		h4 {
+			margin-left: 70px;
+			font-weight: 700;
+			margin-bottom: 15px;
+			font-size: 18px;
+			a {
+				color: $color_5;
+				transition: 0.3s;
+			}
+		}
+		p, ol, ul {
+      text-align: left;
+      font-family: $font-family_2 !important;
+			margin-left: 70px;
+			line-height: 24px;
+			font-size: 14px;
+		}
+		&:hover {
+			box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.08);
+			h4 {
+				a {
+					color: $color_2;
+				}
+			}
+		}
+	}
+}
+#contact {
+	.info-wrap {
+		padding: 30px;
+		background: #fff;
+		border-radius: 4px;
+	}
+	.info {
+		i {
+			font-size: 20px;
+			color: $color_2;
+			float: left;
+			width: 44px;
+			height: 44px;
+			background: #eaf4fb;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50px;
+			transition: all 0.3s ease-in-out;
+		}
+		h4 {
+			padding: 0 0 0 60px;
+			font-size: 22px;
+			font-weight: 600;
+			margin-bottom: 5px;
+			color: $color_5;
+		}
+		p {
+			padding: 0 0 0 60px;
+			margin-bottom: 0;
+			font-size: 14px;
+			color: $color_19;
+		}
+		&:hover {
+			i {
+				background: #3498db;
+				color: $color_4;
+			}
+		}
+	}
+}
